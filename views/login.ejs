@@ -1,0 +1,16 @@
+<%- include ('partials/header'); %>
+
+<div style="color: brown; padding-bottom: 2px ;" class="container">
+    <h4>Login</h4>
+</div>
+
+<div class="container">
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+
+<%- include ('partials/footer'); %>

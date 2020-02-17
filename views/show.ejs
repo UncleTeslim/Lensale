@@ -1,0 +1,61 @@
+<%- include ('partials/header'); %>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Lensale</p>
+            <div class="list-group">
+                <li class="list-group-item">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="image-responsive" src="<%= sell.image %>">
+            </div>
+            <div class="caption-full">
+                <h4 class="pull-right"><%= sell.price %></h4>
+                <h2><a><%=sell.name%></a></h2>
+                <h4><%= sell.description %></h4>
+                <p>
+                    <em>Posted By <%= sell.poster.username %></em>
+                </p>
+               <%if(currentUser && sell.poster.id.equals(currentUser._id)){ %>
+                <a class="btn btn-primary" href="/sell/<%= sell._id %>/edit ">Edit</a>
+                
+                <form id="delete-form" action="/sell/<%= sell._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                <%}%> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+  
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include ('partials/footer'); %>

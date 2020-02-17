@@ -1,0 +1,35 @@
+<%- include ('partials/header'); %>
+
+<div class="container">
+      <header class="jumbotron" >
+         <h1>Welcome To Lensale!!</h1>
+         <p>These are cameras already listed for sale</p>
+         <p>
+            <a class="btn btn-primary btn-large" href="/sell/new">Place A Camera For Sale</a>
+         </p>
+
+         
+      </header>
+
+      <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+         <% cameras.forEach(function( camera ) { %>
+         <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+               <img src="<%=  camera.image %>">
+               <div class="caption">
+                  <h4><%= camera.name %> - <%= camera.price%></h4>
+               </div>
+               <p>
+                  <a href="/sell/<%= camera._id %>" class="btn btn-primary">Details</a>
+               </p>
+            </div>
+         </div>
+         
+         <% }); %>
+      </div>
+      
+
+</div>
+      <%- include ('partials/footer'); %>
+
+ 
