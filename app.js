@@ -15,8 +15,17 @@ var  express        = require("express");
 
 
 
+
+
+
+
+
+
 //seedDB();
-mongoose.connect('mongodb://localhost/lensale', { useNewUrlParser: true });
+    mongoose.connect('mongodb://localhost/lensale', { useNewUrlParser: true });
+//mongoose.connect('mongodb+srv://Teslim:5OKQ0t0pSZLQ3MRw@lensale-slose.mongodb.net/test?retryWrites=true&w=majority');
+
+
 app.use(bodyParser.urlencoded({extended : false}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"))
