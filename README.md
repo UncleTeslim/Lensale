@@ -1,0 +1,1 @@
+A minimalist camera sale app built with express.js
